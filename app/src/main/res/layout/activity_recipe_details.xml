@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetailsActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/teal_700"
+        app:title="Details"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView_recipe_name"
+                android:text="Recipe Name"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/textView_recipe_source"
+                android:textColor="@color/green"
+                android:text="Source"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            
+            <ImageView
+                android:id="@+id/imageView_food_image"
+                android:scaleType="centerCrop"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+
+            <TextView
+                android:text="SUMMARY"
+                android:textSize="18sp"
+                android:textColor="@color/teal_700"
+                android:textStyle="bold"
+                android:paddingTop="2dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textView_recipe_summary"
+                android:text="Summary"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="INSTRUCTIONS:"
+                android:textSize="18sp"
+                android:textColor="@color/teal_700"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_instruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:text="Similar Recipe"
+                android:textSize="20sp"
+                android:textColor="@color/teal_700"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_recipe_similar"
+                android:layout_margin="8dp"/>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+        
+
+</LinearLayout>
